@@ -17,7 +17,7 @@ namespace GestaoProff.DBConfig
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // Substitua "sua_string_de_conexao" pela sua string de conexão SQL Server
-            optionsBuilder.UseSqlServer("sua_string_de_conexao");
+            optionsBuilder.UseSqlServer("Server=seu_servidor;Database=seu_banco_de_dados;User Id=seu_usuario;Password=sua_senha;\r\n");
         }
 
     }
