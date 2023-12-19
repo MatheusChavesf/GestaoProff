@@ -1,0 +1,8 @@
+C:\Users\matheus.chaves\source\repos\GestaoProff\obj\Debug\net7.0\GestaoProff.csproj.AssemblyReference.cache
+C:\Users\matheus.chaves\source\repos\GestaoProff\obj\Debug\net7.0\GestaoProff.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matheus.chaves\source\repos\GestaoProff\obj\Debug\net7.0\GestaoProff.AssemblyInfoInputs.cache
+C:\Users\matheus.chaves\source\repos\GestaoProff\obj\Debug\net7.0\GestaoProff.AssemblyInfo.cs
+C:\Users\matheus.chaves\source\repos\GestaoProff\obj\Debug\net7.0\GestaoProff.csproj.CoreCompileInputs.cache
+C:\Users\matheus.chaves\source\repos\GestaoProff\obj\Debug\net7.0\GestaoProff.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\matheus.chaves\source\repos\GestaoProff\obj\Debug\net7.0\GestaoProff.RazorAssemblyInfo.cache
+C:\Users\matheus.chaves\source\repos\GestaoProff\obj\Debug\net7.0\GestaoProff.RazorAssemblyInfo.cs
