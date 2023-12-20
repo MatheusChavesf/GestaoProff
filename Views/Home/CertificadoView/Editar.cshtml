@@ -1,0 +1,29 @@
+@model GestaoProff.Models.CertificadoModel
+
+<h2>Editar Certificado</h2>
+
+<form asp-action="Editar">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="IdCertificado" />
+
+    <div class="form-group">
+        <label asp-for="MatriculaAluno" class="control-label"></label>
+        <input asp-for="MatriculaAluno" class="form-control" />
+        <span asp-validation-for="MatriculaAluno" class="text-danger"></span>
+    </div>
+
+    
+
+    <div class="form-group">
+        <label asp-for="DataCertificado" class="control-label"></label>
+        <input asp-for="DataCertificado" class="form-control" />
+        <span asp-validation-for="DataCertificado" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Salvar" class="btn btn-primary" />
+    </div>
+</form>
+<p>
+    <a asp-action="Index">Voltar para a lista</a>
+</p>

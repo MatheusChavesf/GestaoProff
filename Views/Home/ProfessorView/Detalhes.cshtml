@@ -1,0 +1,28 @@
+@page
+@model GestaoProff.Models.ProfessorModel
+
+<h2>Detalhes do Professor</h2>
+
+<div>
+    <h4>Professor</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NomeProfessor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NomeProfessor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdDisciplina)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdDisciplina)
+        </dd>
+    </dl>
+</div>
+
+<p>
+    <a asp-action="Editar" asp-route-id="@Model.IdProfessor">Editar</a> |
+    <a asp-action="Index">Voltar para a Lista</a>
+</p>

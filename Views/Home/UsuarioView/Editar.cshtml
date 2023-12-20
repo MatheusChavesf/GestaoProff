@@ -1,0 +1,29 @@
+@model GestaoProff.Models.UsuarioModel
+
+<h2>Editar Usuário</h2>
+
+<form asp-action="Editar">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="IdUsuario" />
+
+    <div class="form-group">
+        <label asp-for="NomeUsuario" class="control-label"></label>
+        <input asp-for="NomeUsuario" class="form-control" />
+        <span asp-validation-for="NomeUsuario" class="text-danger"></span>
+    </div>
+
+    
+
+    <div class="form-group">
+        <label asp-for="TipoUsuario" class="control-label"></label>
+        <input asp-for="TipoUsuario" class="form-control" />
+        <span asp-validation-for="TipoUsuario" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Salvar" class="btn btn-primary" />
+    </div>
+</form>
+<p>
+    <a asp-action="Index">Voltar para a lista</a>
+</p>

@@ -1,0 +1,32 @@
+@page
+@model IEnumerable<GestaoProff.Models.CursoModel>
+
+<h2>Lista de Cursos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome do Curso</th>
+            <th>Período Letivo</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var curso in Model)
+        {
+                <tr>
+                    <td>@curso.IdCurso</td>
+                    <td>@curso.NomeCurso</td>
+                    <td>@curso.IdPeriodoLetivo</td>
+                    <td>
+                        <a asp-action="Detalhes" asp-route-id="@curso.IdCurso">Detalhes</a> |
+                        <a asp-action="Editar" asp-route-id="@curso.IdCurso">Editar</a> |
+                        <a asp-action="Excluir" asp-route-id="@curso.IdCurso">Excluir</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Adicionar">Adicionar Novo Curso</a>

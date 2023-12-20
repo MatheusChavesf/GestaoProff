@@ -1,0 +1,40 @@
+@page
+@model GestaoProff.Models.AlunoModel
+
+<h2>Editar Aluno</h2>
+
+<form asp-action="Editar">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <input type="hidden" asp-for="MatriculaAluno" />
+
+    <div class="form-group">
+        <label asp-for="NomeAluno" class="control-label"></label>
+        <input asp-for="NomeAluno" class="form-control" />
+        <span asp-validation-for="NomeAluno" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IdCurso" class="control-label"></label>
+        <input asp-for="IdCurso" class="form-control" />
+        <span asp-validation-for="IdCurso" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EmailAluno" class="control-label"></label>
+        <input asp-for="EmailAluno" class="form-control" />
+        <span asp-validation-for="EmailAluno" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TelefoneAluno" class="control-label"></label>
+        <input asp-for="TelefoneAluno" class="form-control" />
+        <span asp-validation-for="TelefoneAluno" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Salvar" class="btn btn-primary" />
+    </div>
+</form>
+
+<a asp-action="Index">Voltar para a Lista</a>

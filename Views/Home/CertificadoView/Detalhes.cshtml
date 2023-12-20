@@ -1,0 +1,28 @@
+@model GestaoProff.Models.CertificadoModel
+
+<h2>Detalhes do Certificado</h2>
+
+<div>
+    <h4>CertificadoModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriculaAluno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriculaAluno)
+        </dd>
+
+        
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DataCertificado)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataCertificado)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a asp-action="Index">Voltar para a lista</a>
+</p>

@@ -1,0 +1,28 @@
+@model GestaoProff.Models.DisciplinaModel
+
+<h2>Adicionar Disciplina</h2>
+
+<form asp-action="Adicionar">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="NomeDisciplina" class="control-label"></label>
+        <input asp-for="NomeDisciplina" class="form-control" />
+        <span asp-validation-for="NomeDisciplina" class="text-danger"></span>
+    </div>
+
+    
+
+    <div class="form-group">
+        <label asp-for="IdCurso" class="control-label"></label>
+        <input asp-for="IdCurso" class="form-control" />
+        <span asp-validation-for="IdCurso" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Adicionar" class="btn btn-primary" />
+    </div>
+</form>
+<p>
+    <a asp-action="Index">Voltar para a lista</a>
+</p>

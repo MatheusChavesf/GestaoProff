@@ -1,0 +1,36 @@
+@model IEnumerable<GestaoProff.Models.NotaModel>
+
+<h2>Lista de Notas</h2>
+
+<p>
+    <a asp-action="Adicionar">Adicionar Nova Nota</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Matrícula do Aluno</th>
+            <th>ID da Disciplina</th>
+            <th>Valor da Nota</th>
+            <th>Data de Lançamento</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var nota in Model)
+        {
+                <tr>
+                    <td>@nota.IdNota</td>
+                    <td>@nota.MatriculaAluno</td>
+                    <td>@nota.IdDisciplina</td>
+                    <td>@nota.ValorNota</td>
+                    <td>@nota.DataLancamento</td>
+                    <td>
+                        <a asp-action="Detalhes" asp-route-id="@nota.IdNota">Detalhes</a> |
+                        <a asp-action="Editar" asp-route-id="@nota.IdNota">Editar</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>

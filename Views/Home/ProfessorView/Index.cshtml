@@ -1,0 +1,31 @@
+@page
+@model IEnumerable<GestaoProff.Models.ProfessorModel>
+
+<h2>Lista de Professores</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome do Professor</th>
+            <th>Disciplina</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var professor in Model)
+        {
+                    <tr>
+                        <td>@professor.IdProfessor</td>
+                        <td>@professor.NomeProfessor</td>
+                        <td>@professor.IdDisciplina</td>
+                        <td>
+                            <a asp-action="Editar" asp-route-id="@professor.IdProfessor">Editar</a> |
+                            <a asp-action="Excluir" asp-route-id="@professor.IdProfessor">Excluir</a>
+                        </td>
+                    </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Adicionar">Adicionar Novo Professor</a>

@@ -1,0 +1,36 @@
+@model IEnumerable<GestaoProff.Models.FaltaModel>
+
+<h2>Lista de Faltas</h2>
+
+<p>
+    <a asp-action="Adicionar">Adicionar Nova Falta</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Matrícula do Aluno</th>
+            <th>ID da Disciplina</th>
+            <th>Quantidade de Faltas</th>
+            <th>Data da Falta</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var falta in Model)
+        {
+                <tr>
+                    <td>@falta.IdFalta</td>
+                    <td>@falta.MatriculaAluno</td>
+                    <td>@falta.IdDisciplina</td>
+                    <td>@falta.QuantidadeFalta</td>
+                    <td>@falta.DataFalta</td>
+                    <td>
+                        <a asp-action="Detalhes" asp-route-id="@falta.IdFalta">Detalhes</a> |
+                        <a asp-action="Editar" asp-route-id="@falta.IdFalta">Editar</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>

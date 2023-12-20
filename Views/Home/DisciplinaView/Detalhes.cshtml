@@ -1,0 +1,28 @@
+@model GestaoProff.Models.DisciplinaModel
+
+<h2>Detalhes da Disciplina</h2>
+
+<div>
+    <h4>DisciplinaModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NomeDisciplina)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NomeDisciplina)
+        </dd>
+
+        
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdCurso)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdCurso)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a asp-action="Index">Voltar para a lista</a>
+</p>

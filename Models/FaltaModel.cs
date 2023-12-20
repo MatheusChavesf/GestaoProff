@@ -1,10 +1,12 @@
 using System;
-
-public class FaltaModel
+namespace GestaoProff.Models
 {
-    public int IdFalta { get; set; }
-    public AlunoModel MatriculaAluno { get; set; }
-    public DisciplinaModel IDDisciplina { get; set; }
-    public int Quantidade { get; set; }
-    public DateTime DataLancamento { get; set; }
+    public class FaltaModel
+    {
+        public int IdFalta { get; set; }
+        public AlunoModel? MatriculaAluno { get; set; }
+        public DisciplinaModel? IdDisciplina { get; set; }
+        public int QuantidadeFalta { get; set; }
+        public DateTime DataFalta { get; set; }
+    }
 }

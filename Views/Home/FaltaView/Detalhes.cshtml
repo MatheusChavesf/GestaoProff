@@ -1,0 +1,28 @@
+@model GestaoProff.Models.FaltaModel
+
+<h2>Detalhes da Falta</h2>
+
+<div>
+    <h4>FaltaModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriculaAluno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriculaAluno)
+        </dd>
+
+        
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DataFalta)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataFalta)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a asp-action="Index">Voltar para a lista</a>
+</p>

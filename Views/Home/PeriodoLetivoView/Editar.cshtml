@@ -1,0 +1,29 @@
+@model GestaoProff.Models.PeriodoLetivoModel
+
+<h2>Editar Período Letivo</h2>
+
+<form asp-action="Editar">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="IdPeriodoLetivo" />
+
+    <div class="form-group">
+        <label asp-for="DataInicioPL" class="control-label"></label>
+        <input asp-for="DataInicioPL" class="form-control" />
+        <span asp-validation-for="DataInicioPL" class="text-danger"></span>
+    </div>
+
+    
+
+    <div class="form-group">
+        <label asp-for="AtivoPL" class="control-label"></label>
+        <input asp-for="AtivoPL" class="form-control" />
+        <span asp-validation-for="AtivoPL" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Salvar" class="btn btn-primary" />
+    </div>
+</form>
+<p>
+    <a asp-action="Index">Voltar para a lista</a>
+</p>

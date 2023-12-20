@@ -1,0 +1,27 @@
+@model GestaoProff.Models.NotaModel
+
+<h2>Adicionar Nota</h2>
+
+<form asp-action="Adicionar">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="MatriculaAluno" class="control-label"></label>
+        <input asp-for="MatriculaAluno" class="form-control" />
+        <span asp-validation-for="MatriculaAluno" class="text-danger"></span>
+    </div>
+
+    
+
+    <div class="form-group">
+        <label asp-for="DataLancamento" class="control-label"></label>
+        <input asp-for="DataLancamento" class="form-control" />
+        <span asp-validation-for="DataLancamento" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Adicionar" class="btn btn-primary" />
+    </div>
+</form>
+<p>
+    <a asp-action="Index">Voltar para a lista

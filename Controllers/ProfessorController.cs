@@ -1,16 +1,15 @@
-
-
 using Microsoft.AspNetCore.Mvc;
-using GestaoProff.Models; 
+using GestaoProff.DBConfig; 
+using GestaoProff.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
 
-public class ProfessoresController : Controller
+public class ProfessorController : Controller
 {
-    private readonly SeuDbContext _context;
+    private readonly AppDbContext _context;
 
-    public ProfessoresController(SeuDbContext context)
+    public ProfessorController(AppDbContext context)
     {
         _context = context;
     }
@@ -28,7 +27,7 @@ public class ProfessoresController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Adicionar([Bind("Id,NomeProfessor,Disciplina")] ProfessorModel professorModel)
+    public async Task<IActionResult> Adicionar([Bind("IdProfessor,NomeProfessor,IdDisciplina")] ProfessorModel professorModel)
     {
         if (ModelState.IsValid)
         {
@@ -38,7 +37,4 @@ public class ProfessoresController : Controller
         }
         return View(professorModel);
     }
-
-    
 }
-

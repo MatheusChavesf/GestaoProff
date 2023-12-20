@@ -8,6 +8,15 @@
 
 	<ItemGroup>
 		<Folder Include="DBConfig\" />
+		<Folder Include="Views\Home\AlunoView\" />
+		<Folder Include="Views\Home\AvaliacaoView\" />
+		<Folder Include="Views\Home\CertificadoView\" />
+		<Folder Include="Views\Home\DisciplinaView\" />
+		<Folder Include="Views\Home\FaltaView\" />
+		<Folder Include="Views\Home\CursoView\" />
+		<Folder Include="Views\Home\NotaView\" />
+		<Folder Include="Views\Home\UsuarioView\" />
+		<Folder Include="Views\Home\PeriodoLetivoView\" />
 	</ItemGroup>
 
 	<ItemGroup>

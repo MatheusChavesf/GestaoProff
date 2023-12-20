@@ -1,0 +1,28 @@
+@model GestaoProff.Models.PeriodoLetivoModel
+
+<h2>Detalhes do Período Letivo</h2>
+
+<div>
+    <h4>PeriodoLetivoModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DataInicioPL)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataInicioPL)
+        </dd>
+
+        
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AtivoPL)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AtivoPL)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a asp-action="Index">Voltar para a lista</a>
+</p>

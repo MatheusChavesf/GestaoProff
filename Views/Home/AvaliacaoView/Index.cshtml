@@ -1,0 +1,34 @@
+@page
+@model IEnumerable<GestaoProff.Models.AvaliacaoModel>
+
+<h2>Lista de Avaliações</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tipo de Avaliação</th>
+            <th>Data da Avaliação</th>
+            <th>Disciplina</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var avaliacao in Model)
+        {
+                <tr>
+                    <td>@avaliacao.IdAvaliacao</td>
+                    <td>@avaliacao.TipoAvaliacao</td>
+                    <td>@avaliacao.DataAvaliacao</td>
+                    <td>@avaliacao.IdDisciplina</td>
+                    <td>
+                        <a asp-action="Detalhes" asp-route-id="@avaliacao.IdAvaliacao">Detalhes</a> |
+                        <a asp-action="Editar" asp-route-id="@avaliacao.IdAvaliacao">Editar</a> |
+                        <a asp-action="Excluir" asp-route-id="@avaliacao.IdAvaliacao">Excluir</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Adicionar">Adicionar Nova Avaliação</a>

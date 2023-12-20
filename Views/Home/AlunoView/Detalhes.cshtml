@@ -1,0 +1,39 @@
+@page
+@model GestaoProff.Models.AlunoModel
+
+<h2>Detalhes do Aluno</h2>
+
+<div>
+    <h4>Aluno</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NomeAluno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NomeAluno)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdCurso)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdCurso)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EmailAluno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EmailAluno)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TelefoneAluno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TelefoneAluno)
+        </dd>
+    </dl>
+</div>
+
+<p>
+    <a asp-action="Editar" asp-route-id="@Model.MatriculaAluno">Editar</a> |
+    <a as

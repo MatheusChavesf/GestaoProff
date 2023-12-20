@@ -1,0 +1,36 @@
+@page
+@model IEnumerable<GestaoProff.Models.AlunoModel>
+
+<h2>Lista de Alunos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Matrícula</th>
+            <th>Nome do Aluno</th>
+            <th>Curso</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var aluno in Model)
+        {
+                <tr>
+                    <td>@aluno.MatriculaAluno</td>
+                    <td>@aluno.NomeAluno</td>
+                    <td>@aluno.IdCurso</td>
+                    <td>@aluno.EmailAluno</td>
+                    <td>@aluno.TelefoneAluno</td>
+                    <td>
+                        <a asp-action="Detalhes" asp-route-id="@aluno.MatriculaAluno">Detalhes</a> |
+                        <a asp-action="Editar" asp-route-id="@aluno.MatriculaAluno">Editar</a> |
+                        <a asp-action="Excluir" asp-route-id="@aluno.MatriculaAluno">Excluir</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Adicionar">Adicionar Novo Aluno</a>

@@ -1,3 +1,4 @@
+using GestaoProff.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
@@ -11,14 +12,16 @@ namespace GestaoProff.DBConfig
         public DbSet<FaltaModel> Faltas { get; set; }
         public DbSet<NotaModel> Notas { get; set; }
         public DbSet<ProfessorModel> Professores { get; set; }
-
-        // Configurações adicionais do DbContext, se necessário...
+        public DbSet<AvaliacaoModel> Avaliacoes { get; set; }
+        public DbSet<CertificadoModel> Certificados { get; set; }
+        public DbSet<PeriodoLetivoModel> PeriodosLetivos { get; set; }
+        public DbSet<UsuarioModel> Usuarios { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // Substitua "sua_string_de_conexao" pela sua string de conexão SQL Server
-            optionsBuilder.UseSqlServer("Server=seu_servidor;Database=seu_banco_de_dados;User Id=seu_usuario;Password=sua_senha;\r\n");
+            optionsBuilder.UseSqlServer("Server=ABHNTBL6800317\\DBGESTAOPROFF;Database=GESTAOPROFF;Integrated Security=True;");
         }
+
 
     }
 }
