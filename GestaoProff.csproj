@@ -1,31 +1,33 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
-		<Nullable>enable</Nullable>
-		<ImplicitUsings>enable</ImplicitUsings>
-	</PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
 
-	<ItemGroup>
-		<Folder Include="DBConfig\" />
-		<Folder Include="Views\Home\AlunoView\" />
-		<Folder Include="Views\Home\AvaliacaoView\" />
-		<Folder Include="Views\Home\CertificadoView\" />
-		<Folder Include="Views\Home\DisciplinaView\" />
-		<Folder Include="Views\Home\FaltaView\" />
-		<Folder Include="Views\Home\CursoView\" />
-		<Folder Include="Views\Home\NotaView\" />
-		<Folder Include="Views\Home\UsuarioView\" />
-		<Folder Include="Views\Home\PeriodoLetivoView\" />
-	</ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.App" Version="6.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+        <PackageReference Include="SpecFlow" Version="3.9.0" />
+        <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.0" />
+    </ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-		<PackageReference Include="Microsoft.AspNetCore.App" Version="6.0.0" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
-	</ItemGroup>
+    <ItemGroup>
+        <Folder Include="DBConfig\" />
+        <Folder Include="Views\Home\AlunoView\" />
+        <Folder Include="Views\Home\AvaliacaoView\" />
+        <Folder Include="Views\Home\CertificadoView\" />
+        <Folder Include="Views\Home\DisciplinaView\" />
+        <Folder Include="Views\Home\FaltaView\" />
+        <Folder Include="Views\Home\CursoView\" />
+        <Folder Include="Views\Home\NotaView\" />
+        <Folder Include="Views\Home\UsuarioView\" />
+        <Folder Include="Views\Home\PeriodoLetivoView\" />
+    </ItemGroup>
 
 </Project>
